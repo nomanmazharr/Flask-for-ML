@@ -1,2 +1,3 @@
 flask-for-ml/
 .idea/
+__pycache__/

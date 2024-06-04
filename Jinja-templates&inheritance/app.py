@@ -12,5 +12,15 @@ def home():
 def about():
     return render_template('about.html', title='About')
 
+
+@app.route('/employees')
+def employees():
+    return render_template('employees.html', title='Employees')
+
+
+@app.route('/managers')
+def managers():
+    return render_template('manager.html', title='Managers')
+
 if __name__ == '__main__':
     app.run(debug=True)

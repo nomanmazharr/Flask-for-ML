@@ -1,1 +1,10 @@
 {% extends 'layout.html' %}
+
+{% block content %}
+<div>
+    <p>New user: <a href="{{ url_for('signup') }}">SignUp to continue</a></p>
+    <p>Old user: <a href="{{ url_for('login') }}">Login to account</a></p>
+
+</div>
+
+{% endblock content %}

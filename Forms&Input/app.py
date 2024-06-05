@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for, redirect
 
 app = Flask(__name__)
 
@@ -17,7 +17,6 @@ def signup():
 @app.route('/login')
 def login():
     return render_template('login.html', title='Login')
-
 
 
 if __name__ == '__main__':

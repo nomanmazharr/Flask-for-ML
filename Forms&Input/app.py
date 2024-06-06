@@ -1,6 +1,8 @@
 from flask import Flask, render_template, url_for, redirect
+from form import SignUp
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = "secret_key"
 
 
 @app.route('/')
@@ -9,9 +11,10 @@ def home():
     return render_template('home.html', title='Home')
 
 
-@app.route('/signup')
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    return render_template('signup.html', title='SignUp')
+    form = SignUp()
+    return render_template('signup.html', title='SignUp', form = form)
 
 
 @app.route('/login')

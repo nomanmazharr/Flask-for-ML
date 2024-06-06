@@ -14,6 +14,8 @@ def home():
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     form = SignUp()
+    if form.validate_on_submit():
+        return redirect(url_for('home'))
     return render_template('signup.html', title='SignUp', form = form)
 
 

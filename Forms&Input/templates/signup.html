@@ -74,6 +74,12 @@
         <!-- {{ form.submit.label }} -->
         {{ form.submit }}
     </div>
+    <br>
+
+    <div>
+        <p>Already Registered? <a href="{{ url_for('login') }}">Login</a></p>
+        <p>Redirect to Homepage... <a href="{{ url_for('home') }}">Home</a></p>
+    </div>
 </form>
 
 {% endblock content %}

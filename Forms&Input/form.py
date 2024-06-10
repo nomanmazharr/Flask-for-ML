@@ -5,7 +5,8 @@ from wtforms import (
     SelectField,
     PasswordField,
     DateField,
-    SubmitField
+    SubmitField,
+    BooleanField
 
 )
 
@@ -49,7 +50,7 @@ class SignUp(FlaskForm):
     )
 
     submit = SubmitField(
-        "Sign Up"
+        "SignUp"
     )
 
 class Login(FlaskForm):
@@ -63,5 +64,8 @@ class Login(FlaskForm):
         validators=[DataRequired(), Length(6, 15)]
     )
 
+    remember = BooleanField("Remember me")
+
     submit = SubmitField("Login")
 
+    

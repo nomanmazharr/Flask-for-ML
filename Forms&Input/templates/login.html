@@ -26,7 +26,19 @@
     <br>
 
     <div>
+        {{ form.remember.label }}
+        {{ form.remember }}
+    </div>
+    <br>
+
+    <div>
         {{ form.submit }}
+    </div>
+    <br>
+
+    <div>
+        <p>Not Registered? <a href=" {{ url_for('signup') }}">Sign Up</a></p>
+        <p>Redirect to Homepage... <a href="{{ url_for('home') }}">Home</a></p>
     </div>
 </form>
 {% endblock content %}

@@ -23,7 +23,7 @@ def signup():
 def login():
     form = Login()
     if form.validate_on_submit():
-        return redirect(url_for("home"))
+        return redirect(url_for('home'))
     return render_template('login.html', title='Login', form = form)
 
 

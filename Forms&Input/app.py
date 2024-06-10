@@ -23,8 +23,14 @@ def signup():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = Login()
+    email = form.email.data
+    password = form.password.data
     if form.validate_on_submit():
-        return redirect(url_for('home'))
+        if email == "Ali@gmail.com" and password == '123456':
+            flash("Successfully LoggedIn")
+            return redirect(url_for('home')) 
+        else:
+            flash("Incorrect Email or Password") 
     return render_template('login.html', title='Login', form = form)
 
 

@@ -18,8 +18,8 @@
     <div>
         {{ form.email.label }}
         {{ form.email }}
-        {% if form.username.errors %}
-            {% for error in form.username.errors%}
+        {% if form.email.errors %}
+            {% for error in form.email.errors %}
                 <div>{{ error }}</div>
             {% endfor %}
         {% endif %}
@@ -29,8 +29,8 @@
     <div>
         {{ form.gender.label }}
         {{ form.gender }}
-        {% if form.username.errors %}
-        {% for error in form.username.errors%}
+        {% if form.gender.errors %}
+        {% for error in form.gender.errors %}
             <div>{{ error }}</div>
         {% endfor %}
         {% endif %}
@@ -40,8 +40,8 @@
     <div>
         {{ form.date.label }}
         {{ form.date }}
-        {% if form.username.errors %}
-        {% for error in form.username.errors%}
+        {% if form.date.errors %}
+        {% for error in form.date.errors %}
             <div>{{ error }}</div>
         {% endfor %}
         {% endif %}
@@ -51,8 +51,8 @@
     <div>
         {{ form.password.label }}
         {{ form.password }}
-        {% if form.username.errors %}
-        {% for error in form.username.errors%}
+        {% if form.password.errors %}
+        {% for error in form.password.errors %}
             <div>{{ error }}</div>
         {% endfor %}
         {% endif %}
@@ -62,8 +62,8 @@
     <div>
         {{ form.confirm_password.label }}
         {{ form.confirm_password }}
-        {% if form.username.errors %}
-        {% for error in form.username.errors%}
+        {% if form.confirm_password.errors %}
+        {% for error in form.confirm_password.errors %}
             <div>{{ error }}</div>
         {% endfor %}
         {% endif %}
@@ -72,7 +72,7 @@
     
     <div>
         <!-- {{ form.submit.label }} -->
-        {{ form.submit }}
+        {{ form.submit() }}
     </div>
     <br>
 

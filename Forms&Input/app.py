@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, redirect
-from form import SignUp
+from form import SignUp, Login
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secret_key"
@@ -15,13 +15,16 @@ def home():
 def signup():
     form = SignUp()
     if form.validate_on_submit():
-        return redirect(url_for('home'))
+        return redirect(url_for("home"))
     return render_template('signup.html', title='SignUp', form = form)
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html', title='Login')
+    form = Login()
+    if form.validate_on_submit():
+        return redirect(url_for("home"))
+    return render_template('login.html', title='Login', form = form)
 
 
 if __name__ == '__main__':

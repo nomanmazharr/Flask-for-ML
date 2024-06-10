@@ -51,3 +51,17 @@ class SignUp(FlaskForm):
     submit = SubmitField(
         "Sign Up"
     )
+
+class Login(FlaskForm):
+    email = StringField(
+        "Email",
+        validators= [DataRequired(), Email()]
+    )
+
+    password = PasswordField(
+        "Password", 
+        validators=[DataRequired(), Length(6, 15)]
+    )
+
+    submit = SubmitField("Login")
+

@@ -1,3 +1,4 @@
 flask-for-ml/
 .idea/
 __pycache__/
+*.db

@@ -14,9 +14,8 @@ class Employee(db.Model):
     name = db.Column(db.String(50), nullable=False)
     age = db.Column(db.Integer, nullable=False)
     email = db.Column(db.String(50), nullable=False, unique=True)
-
-
-    def __repr__(self) -> str:
+    
+    def __repr__(self):
         return f'Employee {self.name} is {self.age} years old having email {self.email}'
 
 

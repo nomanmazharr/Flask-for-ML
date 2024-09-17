@@ -19,5 +19,5 @@ class Employee(db.Model):
         return f'Employee {self.name} is {self.age} years old having email {self.email}'
 
 
-if '__name__' == '__main__':
+if __name__ == '__main__':
     app.run(debug=True)
